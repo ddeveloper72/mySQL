@@ -25,19 +25,19 @@ The Learning Outcomes Are:
 * Installing MySQL:
 
 ```
-sudo pip3 install setuptools --upgrade && sudo pip3 install pip --upgrade && sudo pip3 install pymysql
+	sudo pip3 install setuptools --upgrade && sudo pip3 install pip --upgrade && sudo pip3 install pymysql
 ```
 
 * Starting MySQL from the command line:
 
 ```
-sudo service mysql start
+	sudo service mysql start
 ```
 
 or
 
 ```
-mysql-ctl start
+	mysql-ctl start
 ```
 
 To connect to mysql: 
@@ -53,6 +53,7 @@ To connect to mysql:
 ```
 
 ## The Results!
+(sample tutorial clode)
 
 The app was run from Cloud9
 
