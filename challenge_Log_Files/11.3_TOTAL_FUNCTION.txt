@@ -1,0 +1,12 @@
+mysql> SELECT Track.Name, ROUND(SUM(InvoiceLine.UnitPrice * Quantity),2) FROM InvoiceLine
+    -> 
+    -> INNER JOIN Track ON InvoiceLine.TrackId = Track.TrackId
+    -> WHERE Track.Name = "The Woman King";
++----------------+------------------------------------------------+
+| Name           | ROUND(SUM(InvoiceLine.UnitPrice * Quantity),2) |
++----------------+------------------------------------------------+
+| The Woman King |                                           3.98 |
++----------------+------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> notee

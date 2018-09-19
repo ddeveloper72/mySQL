@@ -1,0 +1,39 @@
+mysql> Insert into Track (Name, AlbumId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> values("Extra Track", 348, 1, "U2", 290000, 1234, 0.99);
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`Chinook`.`Track`, CONSTRAINT `FK_TrackMediaTypeId` FOREIGN KEY (`MediaTypeId`) REFERENCES `MediaType` (`MediaTypeId`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+mysql> SELECT TrackId FROM Track WHERE AlbumId = 348; 
++---------+
+| TrackId |
++---------+
+|    3504 |
+|    3505 |
+|    3507 |
+|    3508 |
+|    3509 |
+|    3510 |
+|    3511 |
+|    3512 |
+|    3513 |
+|    3514 |
+|    3515 |
++---------+
+11 rows in set (0.00 sec)
+
+mysql> DELETE FROM Track WHERE TrackId = 3513;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> DELETE FROM Track WHERE TrackId = 3514;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> DELETE FROM Track WHERE TrackId = 3515; 
+Query OK, 1 row affected (0.01 sec)
+
+
+mysql> INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> VALUES ("Another Time, Another Place", 348, 2, 1, "U2", 271000, 1234, 0.99),
+    -> ("The Electric Co.", 348, 2, 1, "U2", 287000, 1234, 0.99),
+    -> ("Shadows and Tall Trees", 348, 2, 1, "U2", 313000, 1234, 0.99);
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> notee

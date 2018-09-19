@@ -1,0 +1,32 @@
+mysql> SELECT SUMN(CustomerId) FROM Customer;
+ERROR 1305 (42000): FUNCTION Chinook.SUMN does not exist
+mysql> SELECT SUM(CustomerId) FROM Customer;
++-----------------+
+| SUM(CustomerId) |
++-----------------+
+|            1770 |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SUMN(CustomerId) FROM Customer;
+ERROR 1305 (42000): FUNCTION Chinook.SUMN does not exist
+mysql> SELECT SUM(CustomerId) FROM Customer
+    -> GROUP BY "Berlin";
++-----------------+
+| SUM(CustomerId) |
++-----------------+
+|            1770 |
++-----------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT City, Count(CustomerId) FROM Customer
+    -> WHERE City = "Berlin"
+    -> ;
++--------+-------------------+
+| City   | Count(CustomerId) |
++--------+-------------------+
+| Berlin |                 2 |
++--------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> notee

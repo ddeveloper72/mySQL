@@ -1,0 +1,9 @@
+mysql> SELECT MIN(LastName) FROM Customer;
++---------------+
+| MIN(LastName) |
++---------------+
+| Almeida       |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> notee;

@@ -1,0 +1,12 @@
+mysql> SELECT COUNT(Track.MediaTypeId) AS Media_Id, Track.Name AS Track_Name, MediaType.Name, InvoiceLine.Quantity FROM MediaType
+    -> INNER JOIN Track ON MediaType.MediaTypeId=Track.MediaTypeId
+    -> INNER JOIN InvoiceLine ON Track.TrackId=InvoiceLine.TrackId
+    -> ORDER BY InvoiceLine.Quantity;
++----------+-----------------------------------------+-----------------+----------+
+| Media_Id | Track_Name                              | Name            | Quantity |
++----------+-----------------------------------------+-----------------+----------+
+|     2240 | For Those About To Rock (We Salute You) | MPEG audio file |        1 |
++----------+-----------------------------------------+-----------------+----------+
+1 row in set (0.00 sec)
+
+mysql> notee

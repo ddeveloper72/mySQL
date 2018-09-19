@@ -1,0 +1,20 @@
+mysql> SELECT Track.Name as Track, MediaType.Name as Type, Genre.Name as Genre
+    -> FROM Track
+    -> INNER JOIN MediaType ON Track.MediaTypeId=MediaType.MediaTypeId
+    -> INNER JOIN Genre ON Track.GenreId=Genre.GenreId
+    -> WHERE MediaType.Name = 'Protected AAC audio file'
+    -> WHERE Genre.Name = 'Soundtrack';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE Genre.Name = 'Soundtrack'' at line 6
+mysql> SELECT Track.Name as Track, MediaType.Name as Type, Genre.Name as Genre
+    -> FROM Track
+    -> INNER JOIN MediaType ON Track.MediaTypeId=MediaType.MediaTypeId
+    -> INNER JOIN Genre ON Track.GenreId=Genre.GenreId
+    -> WHERE MediaType.Name = 'Protected AAC audio file' AND Genre.Name = 'Soundtrack';
++---------------+--------------------------+------------+
+| Track         | Type                     | Genre      |
++---------------+--------------------------+------------+
+| Koyaanisqatsi | Protected AAC audio file | Soundtrack |
++---------------+--------------------------+------------+
+1 row in set (0.01 sec)
+
+mysql> notee

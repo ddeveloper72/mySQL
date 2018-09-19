@@ -1,0 +1,89 @@
+mysql> SELECT EmployeeId, FirstName, LastName,  HireDate FROM Employee
+    -> ORDER BY HireDate, EmployeeId desc LIMIT 4;
++------------+-----------+----------+---------------------+
+| EmployeeId | FirstName | LastName | HireDate            |
++------------+-----------+----------+---------------------+
+|          3 | Jane      | Peacock  | 2002-04-01 00:00:00 |
+|          2 | Nancy     | Edwards  | 2002-05-01 00:00:00 |
+|          1 | Andrew    | Adams    | 2002-08-14 00:00:00 |
+|          4 | Margaret  | Park     | 2003-05-03 00:00:00 |
++------------+-----------+----------+---------------------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT EmployeeId, FirstName, LastName,  HireDate FROM Employee
+    -> ORDER BY HireDate desc 3
+    -> ORDER BY EmployeeId desc 3;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '3
+ORDER BY EmployeeId desc 3' at line 2
+mysql> SELECT EmployeeId, LastName, FirstName, HireDate FROM Employee
+    -> ORDER BY HireDate, EmployeeId  desc LIMIT 3;
++------------+----------+-----------+---------------------+
+| EmployeeId | LastName | FirstName | HireDate            |
++------------+----------+-----------+---------------------+
+|          3 | Peacock  | Jane      | 2002-04-01 00:00:00 |
+|          2 | Edwards  | Nancy     | 2002-05-01 00:00:00 |
+|          1 | Adams    | Andrew    | 2002-08-14 00:00:00 |
++------------+----------+-----------+---------------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT EmployeeId, FirstName, LastName,  HireDate FROM Employee
+    -> ORDER BY EmployeeID, Hiredate desc LIMIT 3;
++------------+-----------+----------+---------------------+
+| EmployeeId | FirstName | LastName | HireDate            |
++------------+-----------+----------+---------------------+
+|          1 | Andrew    | Adams    | 2002-08-14 00:00:00 |
+|          2 | Nancy     | Edwards  | 2002-05-01 00:00:00 |
+|          3 | Jane      | Peacock  | 2002-04-01 00:00:00 |
++------------+-----------+----------+---------------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT EmployeeId, FirstName, LastName,  HireDate FROM Employee
+    -> ORDER BY HireDate, EmployeeId  asc  LIMIT 3;
++------------+-----------+----------+---------------------+
+| EmployeeId | FirstName | LastName | HireDate            |
++------------+-----------+----------+---------------------+
+|          3 | Jane      | Peacock  | 2002-04-01 00:00:00 |
+|          2 | Nancy     | Edwards  | 2002-05-01 00:00:00 |
+|          1 | Andrew    | Adams    | 2002-08-14 00:00:00 |
++------------+-----------+----------+---------------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT EmployeeId, FirstName, LastName, HireDate FROM Employee
+    ->  ORDER BY EmployeeId  HireDate = 2003-10-17;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'HireDate = 2003-10-17' at line 2
+mysql> SELECT EmployeeId, FirstName, LastName, HireDate FROM Employee
+    -> ORDER BY HireDate desc limit 4;
++------------+-----------+----------+---------------------+
+| EmployeeId | FirstName | LastName | HireDate            |
++------------+-----------+----------+---------------------+
+|          8 | Laura     | Callahan | 2004-03-04 00:00:00 |
+|          7 | Robert    | King     | 2004-01-02 00:00:00 |
+|          5 | Steve     | Johnson  | 2003-10-17 00:00:00 |
+|          6 | Michael   | Mitchell | 2003-10-17 00:00:00 |
++------------+-----------+----------+---------------------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT EmployeeId, FirstName, LastName, HireDate FROM Employee
+    -> ORDER BY HireDate desc, EmployeeId desc limit 4; 
++------------+-----------+----------+---------------------+
+| EmployeeId | FirstName | LastName | HireDate            |
++------------+-----------+----------+---------------------+
+|          8 | Laura     | Callahan | 2004-03-04 00:00:00 |
+|          7 | Robert    | King     | 2004-01-02 00:00:00 |
+|          6 | Michael   | Mitchell | 2003-10-17 00:00:00 |
+|          5 | Steve     | Johnson  | 2003-10-17 00:00:00 |
++------------+-----------+----------+---------------------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT EmployeeId, FirstName, LastName, HireDate FROM Employee
+    -> ORDER BY HireDate desc, EmployeeId desc limit 3; 
++------------+-----------+----------+---------------------+
+| EmployeeId | FirstName | LastName | HireDate            |
++------------+-----------+----------+---------------------+
+|          8 | Laura     | Callahan | 2004-03-04 00:00:00 |
+|          7 | Robert    | King     | 2004-01-02 00:00:00 |
+|          6 | Michael   | Mitchell | 2003-10-17 00:00:00 |
++------------+-----------+----------+---------------------+
+3 rows in set (0.00 sec)
+
+mysql> notee

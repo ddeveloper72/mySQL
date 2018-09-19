@@ -1,0 +1,37 @@
+mysql> SELECT COUNT (*) FROM Customer;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*) FROM Customer' at line 1
+mysql> SELECT COUNT(*) FROM Customer;
++----------+
+| COUNT(*) |
++----------+
+|       59 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COUNT(CustomerId) FROM Customer;
++-------------------+
+| COUNT(CustomerId) |
++-------------------+
+|                59 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COUNT(*) FROM Customer
+    -> WHERE FirstName = "Paul";
++----------+
+| COUNT(*) |
++----------+
+|        0 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COUNT(*) FROM Customer
+    -> WHERE FirstName = "Frank";
++----------+
+| COUNT(*) |
++----------+
+|        2 |
++----------+
+1 row in set (0.01 sec)
+
+mysql> notee

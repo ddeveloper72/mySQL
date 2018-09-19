@@ -1,0 +1,49 @@
+mysql> INSERT INTO MediaType (Name)
+    -> VALUES ("Test MediaType 1");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> INSERT INTO Album (Title, ArtistId)
+    -> VALUES ("Boy", 150);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT AlbumId FROM Album WHERE Title = "Boy";
++---------+
+| AlbumId |
++---------+
+|     348 |
++---------+
+1 row in set (0.00 sec)
+
+mysql> SELECT MediaTypeId FROM MediaType WHERE Name = "Protected AAC audio file";
++-------------+
+| MediaTypeId |
++-------------+
+|           2 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT GenreId FROM Genre WHERE  Name = "Rock";
++---------+
+| GenreId |
++---------+
+|       1 |
++---------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> VALUES ("I Will Follow", 348, 2, 1, "U2", 220000, 1234, 0.99);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> VALUES ("Twilight", 348, 2, 1, "U2", 262000, 1234, 0.99)
+    -> VALUES ("An Cat Dubh", 348, 2, 1, "U2", 286000, 1234, 0.99)
+    -> VALUES ("Into the Heart", 348, 2, 1, "U2", 207000, 1234, 0.99)
+    -> VALUES ("Out of Control", 348, 2, 1, "U2", 252000, 1234, 0.99)
+    -> VALUES ("Stories for Boys", 348, 2, 1, "U2", 184000, 1234, 0.99)
+    -> VALUES ("The Ocean", 348, 2, 1, "U2", 94000, 1234, 0.99)
+    -> VALUES ("A Day Without Me", 348, 2, 1, "U2", 192000, 1234, 0.99)
+    -> VALUES ("Another Time", Another Place", 348, 2, 1, "U2", 271000, 1234, 0.99)
+    "> VALUES ("The Electric Co.", Another Place", 348, 2, 1, "U2", 287000, 1234, 0.99)
+    -> VALUES ("Shadows and Tall Trees", Another Place", 348, 2, 1, "U2", 313000, 1234, 0.99);
+    "> Ctrl-C -- exit!
+Aborted

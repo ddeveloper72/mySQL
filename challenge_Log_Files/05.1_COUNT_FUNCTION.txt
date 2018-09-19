@@ -1,0 +1,21 @@
+mysql> SELECT COUNT(SupportRepId) FROM Customer
+    -> WHERE SupportRepId = 4;
++---------------------+
+| COUNT(SupportRepId) |
++---------------------+
+|                  20 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> notee
+mysql> SELECT COUNT(SupportRepId) AS Support_Rep_ID, CONCAT_WS(' ', Employee.FirstName, Employee.LastName) AS Sales_Support_Agent FROM Customer
+    -> INNER JOIN Employee ON Customer.SupportRepId=Employee.EmployeeId
+    -> WHERE Employee.FirstName = 'Jane';
++----------------+---------------------+
+| Support_Rep_ID | Sales_Support_Agent |
++----------------+---------------------+
+|             21 | Jane Peacock        |
++----------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> notee

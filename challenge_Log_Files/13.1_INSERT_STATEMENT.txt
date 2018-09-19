@@ -1,0 +1,72 @@
+mysql> INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> VALUES ("Twilight", 348, 2, 1, "U2", 262000, 1234, 0.99)
+    -> VALUES ("An Cat Dubh", 348, 2, 1, "U2", 286000, 1234, 0.99)
+    -> VALUES ("Into the Heart", 348, 2, 1, "U2", 207000, 1234, 0.99)
+    -> VALUES ("Out of Control", 348, 2, 1, "U2", 252000, 1234, 0.99)
+    -> VALUES ("Stories for Boys", 348, 2, 1, "U2", 184000, 1234, 0.99)
+    -> VALUES ("The Ocean", 348, 2, 1, "U2", 94000, 1234, 0.99)
+    -> VALUES ("A Day Without Me", 348, 2, 1, "U2", 192000, 1234, 0.99)
+    -> VALUES ("Another Time, Another Place", 348, 2, 1, "U2", 271000, 1234, 0.99)
+    -> VALUES ("The Electric Co.", 348, 2, 1, "U2", 287000, 1234, 0.99)
+    -> VALUES ("Shadows and Tall Trees", Another Place", 348, 2, 1, "U2", 313000, 1234, 0.99);
+    "> Ctrl-C -- exit!
+Aborted
+mysql> INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> VALUES ("Twilight", 348, 2, 1, "U2", 262000, 1234, 0.99)
+    -> VALUES ("An Cat Dubh", 348, 2, 1, "U2", 286000, 1234, 0.99)
+    -> VALUES ("Into the Heart", 348, 2, 1, "U2", 207000, 1234, 0.99)
+    -> VALUES ("Out of Control", 348, 2, 1, "U2", 252000, 1234, 0.99)
+    -> VALUES ("Stories for Boys", 348, 2, 1, "U2", 184000, 1234, 0.99)
+    -> VALUES ("The Ocean", 348, 2, 1, "U2", 94000, 1234, 0.99)
+    -> VALUES ("A Day Without Me", 348, 2, 1, "U2", 192000, 1234, 0.99)
+    -> VALUES ("Another Time, Another Place", 348, 2, 1, "U2", 271000, 1234, 0.99)
+    -> VALUES ("The Electric Co.", 348, 2, 1, "U2", 287000, 1234, 0.99)
+    -> VALUES ("Shadows and Tall Trees", 348, 2, 1, "U2", 313000, 1234, 0.99);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES ("An Cat Dubh", 348, 2, 1, "U2", 286000, 1234, 0.99)
+VALUES ("Into the He' at line 3
+mysql> 
+mysql> INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> VALUES ("Twilight", 348, 2, 1, "U2", 262000, 1234, 0.99);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> VALUES ("Twilight", 348, 2, 1, "U2", 262000, 1234, 0.99);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> VALUES ("An Cat Dubh", 348, 2, 1, "U2", 286000, 1234, 0.99);
+Query OK, 1 row affected (0.12 sec)
+
+mysql> INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> VALUES ("Into the Heart", 348, 2, 1, "U2", 207000, 1234, 0.99);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> VALUES ("Out of Control", 348, 2, 1, "U2", 252000, 1234, 0.99);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> VALUES ("Stories for Boys", 348, 2, 1, "U2", 184000, 1234, 0.99);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> VALUES ("The Ocean", 348, 2, 1, "U2", 94000, 1234, 0.99);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> VALUES ("A Day Without Me", 348, 2, 1, "U2", 192000, 1234, 0.99);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> VALUES ("Another Time, Another Place", 348, 2, 1, "U2", 271000, 1234, 0.99);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> VALUES ("The Electric Co.", 348, 2, 1, "U2", 287000, 1234, 0.99);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO Track (Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+    -> VALUES ("The Electric Co.", 348, 2, 1, "U2", 287000, 1234, 0.99);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> notee
