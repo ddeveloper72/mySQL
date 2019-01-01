@@ -1,2 +1,4 @@
 /*.sql
 .venv
+.vscode
+mySQL.code-workspace
