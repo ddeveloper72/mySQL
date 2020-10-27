@@ -5,7 +5,7 @@ cffi==1.11.5
 chardet==3.0.4
 click==6.7
 colorama==0.2.5
-cryptography==2.3.1
+cryptography==3.2
 cursor==1.2.0
 Flask==1.0.2
 Flask-Migrate==2.2.1
